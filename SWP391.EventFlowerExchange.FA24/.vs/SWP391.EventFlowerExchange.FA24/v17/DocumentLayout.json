@@ -1,97 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\",
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|solutionrelative:swp391.eventflowerexchange.infrastructure\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\swp391eventflowerexchangeplatformcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\swp391eventflowerexchangeplatformcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\swp391eventflowerexchangeplatformcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\migrations\\swp391eventflowerexchangeplatformcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\migrations\\swp391eventflowerexchangeplatformcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\migrations\\swp391eventflowerexchangeplatformcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|solutionrelative:swp391.eventflowerexchange.application\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|solutionrelative:swp391.eventflowerexchange.application\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\swp391.eventflowerexchange.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\swp391.eventflowerexchange.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\swp391.eventflowerexchange.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|solutionrelative:swp391.eventflowerexchange.infrastructure\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\applicationroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\applicationroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|solutionrelative:swp391.eventflowerexchange.infrastructure\\applicationroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.api\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{365AA1D4-E969-4591-9B6D-279CC7DD75A0}|SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj|solutionrelative:swp391.eventflowerexchange.api\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|solutionrelative:swp391.eventflowerexchange.application\\voucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\ivoucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\ivoucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|solutionrelative:swp391.eventflowerexchange.infrastructure\\ivoucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\ivoucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.application\\ivoucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AC51EFE-1F4D-4288-AAA1-66BB606B0B55}|SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj|solutionrelative:swp391.eventflowerexchange.application\\ivoucherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.infrastructure\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{807ADF22-323F-401C-A61F-F3FEBBD8509E}|SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj|solutionrelative:swp391.eventflowerexchange.infrastructure\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\objectvalues\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\objectvalues\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\objectvalues\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\objectvalues\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\entities\\createvoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\entities\\createvoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\entities\\createvoucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|d:\\git_main_swp391\\eventflowerexchange\\backend\\swp391.eventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|c:\\users\\lenovo\\documents\\backend\\backendeventflowerexchange\\swp391.eventflowerexchange.fa24\\swp391.eventflowerexchange.domain\\objectvalues\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27F8574C-2B19-432D-AD73-0BC7D3CFDA4D}|SWP391.EventFlowerExchange.Domain\\SWP391.EventFlowerExchange.Domain.csproj|solutionrelative:swp391.eventflowerexchange.domain\\objectvalues\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -102,15 +106,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Dockerfile",
+              "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Dockerfile",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Dockerfile",
+              "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-12T15:59:21.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\Migrations\\Swp391eventFlowerExchangePlatformContextModelSnapshot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -118,11 +135,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "INotificationRepository.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,11 +148,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "NotificationService.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\NotificationService.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Application\\NotificationService.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\NotificationService.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Application\\NotificationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -143,11 +160,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "INotificationService.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\INotificationService.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Application\\INotificationService.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\INotificationService.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Application\\INotificationService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -155,11 +172,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "NotificationController.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Controllers\\NotificationController.cs",
               "ViewState": "AQIAAFMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -167,11 +184,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Program.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Program.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Program.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Program.cs",
               "ViewState": "AQIAAEgAAAAAAAAAAAAgwFUAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -179,22 +196,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SWP391.EventFlowerExchange.API",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\SWP391.EventFlowerExchange.API.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-11T08:58:21.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Controllers\\AccountController.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwBgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -202,11 +219,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ApplicationRoles.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\ApplicationRoles.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -214,11 +231,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AccountRepository.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\AccountRepository.cs",
               "ViewState": "AQIAAGsAAAAAAAAAAAAgwH4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -226,11 +243,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -238,11 +255,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "VoucherController.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Controllers\\VoucherController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -250,11 +267,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "VoucherService.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\VoucherService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\VoucherService.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Application\\VoucherService.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\VoucherService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\VoucherService.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Application\\VoucherService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -262,11 +279,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IVoucherService.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Application\\IVoucherService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -274,11 +291,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "VoucherRepository.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\VoucherRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -286,11 +303,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IVoucherRepository.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\IVoucherRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -298,11 +315,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Product.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Product.cs",
               "ViewState": "AQIAABYAAAAAAAAAAADwvxkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -310,11 +327,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Request.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Request.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -322,11 +339,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Order.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Order.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAUwCoAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -334,11 +351,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Swp391eventFlowerExchangePlatformContext.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\Swp391eventFlowerExchangePlatformContext.cs",
               "ViewState": "AQIAAPsAAAAAAAAAAAAAABUBAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -346,11 +363,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "CreateVoucher.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\Entities\\CreateVoucher.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -358,11 +375,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Voucher.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Voucher.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -370,11 +387,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Account.cs",
-              "DocumentMoniker": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
-              "ToolTip": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
               "RelativeToolTip": "SWP391.EventFlowerExchange.Domain\\ObjectValues\\Account.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAcwC8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

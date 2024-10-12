@@ -3281,11 +3281,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
       "projectName": "SWP391.EventFlowerExchange.Application",
-      "projectPath": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3307,8 +3307,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj": {
-              "projectPath": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj"
+            "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Infrastructure\\SWP391.EventFlowerExchange.Infrastructure.csproj"
             }
           }
         }

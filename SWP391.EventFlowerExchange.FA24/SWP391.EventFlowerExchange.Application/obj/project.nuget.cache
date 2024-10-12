@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zx8YaPHV2GQ=",
+  "dgSpecHash": "F0V/Loi0gTo=",
   "success": true,
-  "projectFilePath": "D:\\git_main_SWP391\\EventFlowerExchange\\Backend\\SWP391.EventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.Application\\SWP391.EventFlowerExchange.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
