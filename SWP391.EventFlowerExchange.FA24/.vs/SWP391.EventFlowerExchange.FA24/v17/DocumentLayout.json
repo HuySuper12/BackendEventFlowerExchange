@@ -116,7 +116,7 @@
               "RelativeDocumentMoniker": "SWP391.EventFlowerExchange.API\\Dockerfile",
               "ToolTip": "C:\\Users\\Lenovo\\Documents\\Backend\\BackendEventFlowerExchange\\SWP391.EventFlowerExchange.FA24\\SWP391.EventFlowerExchange.API\\Dockerfile",
               "RelativeToolTip": "SWP391.EventFlowerExchange.API\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-10-12T15:59:21.567Z",
               "EditorCaption": ""
@@ -143,8 +143,7 @@
               "RelativeToolTip": "SWP391.EventFlowerExchange.Infrastructure\\INotificationRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T09:01:54.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T09:01:54.496Z"
             },
             {
               "$type": "Document",
