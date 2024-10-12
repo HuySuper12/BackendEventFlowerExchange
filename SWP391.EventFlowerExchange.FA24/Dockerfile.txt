@@ -1,0 +1,32 @@
+# Sử dụng image chính thức của .NET SDK để build ứng dụng
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+
+# Đặt thư mục làm việc trong container
+WORKDIR /app
+
+# Sao chép csproj và restore các package
+COPY *.sln .
+COPY EventFlowerExchange/*.csproj EventFlowerExchange/
+RUN dotnet restore
+
+# Sao chép toàn bộ mã nguồn
+COPY . .
+
+# Build ứng dụng
+RUN dotnet publish -c Release -o out
+
+# Sử dụng image chính thức của ASP.NET Core để chạy ứng dụng
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
+
+# Đặt thư mục làm việc trong container
+WORKDIR /app
+
+# Sao chép kết quả build từ image build
+COPY --from=build /app/out .
+
+# Thiết lập port mà ứng dụng sẽ lắng nghe
+ENV ASPNETCORE_URLS=http://+:80
+EXPOSE 80
+
+# Lệnh để chạy ứng dụng
+ENTRYPOINT ["dotnet", "EventFlowerExchange.dll"]
