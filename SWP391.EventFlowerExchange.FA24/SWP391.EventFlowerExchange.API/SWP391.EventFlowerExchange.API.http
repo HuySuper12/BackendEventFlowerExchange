@@ -1,0 +1,6 @@
+@SWP391.EventFlowerExchange.API_HostAddress = http://localhost:5231
+
+GET {{SWP391.EventFlowerExchange.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
