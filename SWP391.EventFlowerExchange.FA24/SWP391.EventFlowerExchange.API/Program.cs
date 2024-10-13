@@ -126,6 +126,13 @@ namespace SWP391.EventFlowerExchange.API
             app.Urls.Add($"http://*:{port}");
 
             app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            app.UseHttpsRedirection();
             app.UseCors("MyCors");
 
             app.UseAuthentication();
