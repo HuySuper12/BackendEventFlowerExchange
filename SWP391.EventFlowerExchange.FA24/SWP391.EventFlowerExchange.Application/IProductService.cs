@@ -10,22 +10,37 @@ namespace SWP391.EventFlowerExchange.Application
 {
     public interface IProductService
     {
-        public Task<List<Product?>> GetEnableProductListFromAPIAsync();
+        public Task<List<GetProduct?>> GetEnableProductListFromAPIAsync();
 
-        public Task<List<Product?>> GetDisableProductListFromAPIAsync();
+        public Task<List<GetProduct?>> GetDisableProductListFromAPIAsync();
 
-        public Task<List<Product?>> GetInProgressProductListFromAPIAsync();
+        public Task<List<GetProduct?>> GetInProgressProductListFromAPIAsync();
 
-        public Task<List<Product?>> GetRejectedProductListFromAPIAsync();
+        public Task<List<GetProduct?>> GetRejectedProductListFromAPIAsync();
 
         public Task<bool> CreateNewProductFromAPIAsync(CreateProduct product);
 
-        public Task<bool> RemoveProductFromAPIAsync(Product product);
+        public Task<bool> RemoveProductFromAPIAsync(GetProduct product);
 
-        public Task<List<Product>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to);
+        public Task<List<GetProduct?>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to);
 
-        public Task<Product> SearchProductByIdFromAPIAsync(Product product);
+        public Task<GetProduct?> SearchProductByIdFromAPIAsync(GetProduct product);
 
-        public Task<List<Product?>> SearchProductByNameFromAPIAsync(string name);
+        public Task<List<GetProduct?>> SearchProductByNameFromAPIAsync(string name);
+
+        public Task<List<GetProduct?>> SearchProductByComboType_EventsFromAPIAsync();
+
+        public Task<List<GetProduct?>> SearchProductByComboType_BatchesFromAPIAsync();
+
+        public Task<List<GetProduct?>> SearchProductByCategory_WeddingFromAPIAsync();
+
+        public Task<List<GetProduct?>> SearchProductByCategory_ConferenceFromAPIAsync();
+
+        public Task<List<GetProduct?>> SearchProductByCategory_BirthdayFromAPIAsync();
+
+        public Task<List<GetProduct?>> GetLatestProductsFromAPIAsync();
+
+        public Task<List<GetProduct?>> GetOldestProductsFromAPIAsync();
+
     }
 }

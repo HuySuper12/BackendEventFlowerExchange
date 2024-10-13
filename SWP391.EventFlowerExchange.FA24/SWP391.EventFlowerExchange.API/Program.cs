@@ -128,7 +128,7 @@ namespace SWP391.EventFlowerExchange.API
                 });
             }
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseCors("MyCors");
 
             app.UseAuthentication();

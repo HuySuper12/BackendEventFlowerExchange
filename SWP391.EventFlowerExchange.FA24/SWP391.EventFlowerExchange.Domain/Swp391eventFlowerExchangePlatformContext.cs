@@ -45,6 +45,9 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
     public virtual DbSet<Voucher> Vouchers { get; set; }
 
+    public virtual DbSet<ImageProduct> ImageProducts { get; set; }
+
+
     private string GetConnectionString()
     {
         IConfiguration config = new ConfigurationBuilder()
@@ -287,6 +290,8 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .HasColumnName("status");
+            entity.Property(e => e.Description)
+                .HasColumnName("description");
             entity.Property(e => e.Category)
                 .HasMaxLength(50)
                 .HasColumnName("category");
@@ -457,6 +462,18 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
+        });
+
+        modelBuilder.Entity<ImageProduct>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ImagePro__3213E83FBC8D53A3");
+
+            entity.Property(e => e.LinkImage).HasMaxLength(450);
+            entity.Property(e => e.ProductId).HasColumnName("product_id");
+
+            entity.HasOne(d => d.Product).WithMany()
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("FK__ImageProd__produ__2B0A656D");
         });
 
         OnModelCreatingPartial(modelBuilder);

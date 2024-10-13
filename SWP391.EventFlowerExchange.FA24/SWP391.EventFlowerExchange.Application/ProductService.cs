@@ -23,45 +23,85 @@ namespace SWP391.EventFlowerExchange.Application
             return await _repo.CreateNewProductAsync(product);
         }
 
-        public async Task<List<Product?>> GetEnableProductListFromAPIAsync()
+        public async Task<List<GetProduct?>> GetEnableProductListFromAPIAsync()
         {
             return await _repo.GetEnableProductListAsync();
         }
 
-        public async Task<List<Product?>> GetDisableProductListFromAPIAsync()
+        public async Task<List<GetProduct?>> GetDisableProductListFromAPIAsync()
         {
             return await _repo.GetDisableProductListAsync();
         }
 
-        public async Task<List<Product?>> GetInProgressProductListFromAPIAsync()
+        public async Task<List<GetProduct?>> GetInProgressProductListFromAPIAsync()
         {
             return await _repo.GetInProgressProductListAsync();
         }
 
-        public async Task<List<Product?>> GetRejectedProductListFromAPIAsync()
+        public async Task<List<GetProduct?>> GetRejectedProductListFromAPIAsync()
         {
             return await _repo.GetRejectedProductListAsync();
         }
 
-        public async Task<bool> RemoveProductFromAPIAsync(Product product)
+        public async Task<bool> RemoveProductFromAPIAsync(GetProduct product)
         {
-            return await _repo.RemoveProductAsync(product);
+            var checkProduct = await _repo.SearchProductByIdAsync(product);
+            if (checkProduct != null)
+            {
+                return await _repo.RemoveProductAsync(product);
+            }
+            return false;
         }
 
-        public async Task<Product> SearchProductByIdFromAPIAsync(Product product)
+        public async Task<GetProduct?> SearchProductByIdFromAPIAsync(GetProduct product)
         {
             return await _repo.SearchProductByIdAsync(product);
         }
 
-        public async Task<List<Product?>> SearchProductByNameFromAPIAsync(string name)
+        public async Task<List<GetProduct?>> SearchProductByNameFromAPIAsync(string name)
         {
             return await _repo.SearchProductByNameAsync(name);
         }
 
-        public async Task<List<Product>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to)
+        public async Task<List<GetProduct?>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to)
         {
 
             return await _repo.SearchProductByPriceRangeAsync(from, to);
         }
+
+        public async Task<List<GetProduct?>> SearchProductByComboType_EventsFromAPIAsync()
+        {
+            return await _repo.SearchProductByComboType_EventsAsync();
+        }
+
+        public async Task<List<GetProduct?>> SearchProductByComboType_BatchesFromAPIAsync()
+        {
+            return await _repo.SearchProductByComboType_BatchesAsync();
+        }
+
+        public async Task<List<GetProduct?>> SearchProductByCategory_WeddingFromAPIAsync()
+        {
+            return await _repo.SearchProductByCategory_WeddingAsync();
+
+        }
+
+        public async Task<List<GetProduct?>> SearchProductByCategory_ConferenceFromAPIAsync()
+        {
+            return await _repo.SearchProductByCategory_ConferenceAsync();
+        }
+
+        public async Task<List<GetProduct?>> SearchProductByCategory_BirthdayFromAPIAsync()
+        {
+            return await _repo.SearchProductByCategory_BirthdayAsync();
+        }
+
+        public Task<List<GetProduct?>> GetLatestProductsFromAPIAsync()
+        {
+            return _repo.GetLatestProductsAsync();
+        }
+
+        public Task<List<GetProduct?>> GetOldestProductsFromAPIAsync()
+        {
+            return _repo.GetOldestProductsAsync();
+        }
     }
-}

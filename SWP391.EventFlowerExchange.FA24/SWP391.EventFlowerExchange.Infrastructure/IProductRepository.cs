@@ -10,22 +10,34 @@ namespace SWP391.EventFlowerExchange.Infrastructure
 {
     public interface IProductRepository
     {
-        public Task<List<Product?>> GetEnableProductListAsync();
+        public Task<List<GetProduct?>> GetEnableProductListAsync();
 
-        public Task<List<Product?>> GetDisableProductListAsync();
+        public Task<List<GetProduct?>> GetDisableProductListAsync();
 
-        public Task<List<Product?>> GetInProgressProductListAsync();
+        public Task<List<GetProduct?>> GetInProgressProductListAsync();
 
-        public Task<List<Product?>> GetRejectedProductListAsync();
+        public Task<List<GetProduct?>> GetRejectedProductListAsync();
 
         public Task<bool> CreateNewProductAsync(CreateProduct product);
 
-        public Task<bool> RemoveProductAsync(Product product);
+        public Task<bool> RemoveProductAsync(GetProduct product);
 
-        public Task<List<Product>> SearchProductByPriceRangeAsync(decimal from, decimal to);
+        public Task<List<GetProduct?>> SearchProductByPriceRangeAsync(decimal from, decimal to);
 
-        public Task<Product> SearchProductByIdAsync(Product product);
+        public Task<GetProduct?> SearchProductByIdAsync(GetProduct product);
 
-        public Task<List<Product?>> SearchProductByNameAsync(string name);
+        public Task<List<GetProduct?>> SearchProductByNameAsync(string name);
+
+        public Task<List<GetProduct?>> SearchProductByComboType_BatchesAsync();
+        public Task<List<GetProduct?>> SearchProductByComboType_EventsAsync();
+
+        public Task<List<GetProduct?>> SearchProductByCategory_WeddingAsync();
+        public Task<List<GetProduct?>> SearchProductByCategory_ConferenceAsync();
+        public Task<List<GetProduct?>> SearchProductByCategory_BirthdayAsync();
+
+        public Task<List<GetProduct?>> GetLatestProductsAsync();
+
+        public Task<List<GetProduct?>> GetOldestProductsAsync();
+
     }
 }

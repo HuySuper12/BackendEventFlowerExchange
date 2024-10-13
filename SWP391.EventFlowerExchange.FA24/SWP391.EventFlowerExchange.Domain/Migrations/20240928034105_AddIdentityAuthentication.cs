@@ -252,6 +252,7 @@ namespace SWP391.EventFlowerExchange.Domain.Migrations
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     created_at = table.Column<DateTime>(type: "datetime", nullable: true)
                 },
                 constraints: table =>
@@ -505,6 +506,29 @@ namespace SWP391.EventFlowerExchange.Domain.Migrations
                     table.PrimaryKey("PK_Voucher", x => x.voucher_id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ImageProduct",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    product_id = table.Column<int>(type: "int", nullable: false),
+                    LinkImage = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.ForeignKey(
+                        name: "FK__ImageProd__produ__2B0A656D",
+                        column: x => x.product_id,
+                        principalTable: "Product",
+                        principalColumn: "product_id");
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ImageProduct_product_id",
+                table: "ImageProduct",
+                column: "product_id");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Order_voucher_id",
                 table: "Order",
@@ -712,6 +736,9 @@ namespace SWP391.EventFlowerExchange.Domain.Migrations
 
             migrationBuilder.DropTable(
                 name: "Product");
+
+            migrationBuilder.DropTable(
+                name: "ImageProduct");
 
             migrationBuilder.DropTable(
                 name: "Order");
