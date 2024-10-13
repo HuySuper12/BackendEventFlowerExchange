@@ -122,17 +122,7 @@ namespace SWP391.EventFlowerExchange.API
                 app.UseSwaggerUI();
             }
 
-            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-            app.Urls.Add($"http://*:{port}");
-
-            app.UseHttpsRedirection();
-            app.UseRouting();
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseCors("MyCors");
 
             app.UseAuthentication();
