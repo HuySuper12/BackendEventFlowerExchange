@@ -119,10 +119,13 @@ namespace SWP391.EventFlowerExchange.API
             app.Urls.Add($"http://0.0.0.0:{port}");
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
+            if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
             }
 
             //app.UseHttpsRedirection();
