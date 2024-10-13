@@ -113,6 +113,15 @@ namespace SWP391.EventFlowerExchange.API
                 };
             });
 
+            builder.WebHost.ConfigureKestrel(serverOptions =>
+            {
+                serverOptions.ListenAnyIP(8080); // HTTP
+                serverOptions.ListenAnyIP(443, listenOptions =>
+                {
+                    listenOptions.UseHttps(); // HTTPS
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
