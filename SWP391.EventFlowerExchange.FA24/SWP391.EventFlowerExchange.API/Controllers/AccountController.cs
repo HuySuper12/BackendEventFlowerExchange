@@ -16,12 +16,14 @@ namespace SWP391.EventFlowerExchange.API.Controllers
     public class AccountController : ControllerBase
     {
         private IAccountService _service;
+        private IOrderService _orderService;
         private SmtpSetting _smtpSettings;
 
-        public AccountController(IAccountService service, IOptionsMonitor<SmtpSetting> option)
+        public AccountController(IAccountService service, IOptionsMonitor<SmtpSetting> option, IOrderService orderService)
         {
             _service = service;
             _smtpSettings = option.CurrentValue;
+            _orderService = orderService;
         }
 
         [HttpPost("SignUp/Buyer")]
@@ -31,12 +33,12 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             {
                 Email = model.Email
             };
-            if (await _service.GetUserByEmailFromAPIAsync(account) != null) 
+            if (await _service.GetUserByEmailFromAPIAsync(account) != null)
             {
                 return BadRequest("Email had been registered.");
             }
 
-            
+
             var result = await _service.SignUpBuyerFromAPIAsync(model);
             if (result.Succeeded)
             {
@@ -48,11 +50,13 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         [HttpPost("SignUp/Seller")]
         public async Task<IActionResult> SignUpSeller(SignUpSeller model)
         {
-            if (await _service.GetUserByEmailFromAPIAsync(new Account() { Email = model.Email}) != null)
+            if (await _service.GetUserByEmailFromAPIAsync(new Account() { Email = model.Email }) != null)
             {
                 return BadRequest("Email had been registered.");
             }
+
             var result = await _service.SignUpSellerFromAPIAsync(model);
+
             if (result.Succeeded)
             {
                 return Ok(result.Succeeded);
@@ -60,8 +64,9 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             return BadRequest("Password must include digits, uppercase letters, lowercase letters, and special characters!");
         }
 
+
         [HttpPost("CreateAccount/Staff")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<ActionResult<bool>> CreateStaff(SignUpStaff model)
         {
             var result = await _service.CreateStaffAccountFromAPIAsync(model);
@@ -73,7 +78,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpPost("CreateAccount/Shipper")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<ActionResult<bool>> CreateShipper(SignUpShipper model)
         {
             var result = await _service.CreateShipperAccountFromAPIAsync(model);
@@ -126,21 +131,21 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpPost("SendOTP")]
-        [Authorize]
-        public async Task <ActionResult<bool>> SendOTPFromAPIAsync(string email)
+        //[Authorize]
+        public async Task<ActionResult<bool>> SendOTPFromAPIAsync(string email)
         {
             return await _service.SendOTPFromAPIAsync(email);
         }
 
         [HttpPost("VerifyOTP")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<bool>> VerifyOTPFromAPIAsync(string email, string otp)
         {
             return await _service.VerifyOTPFromAPIAsync(email, otp);
         }
 
         [HttpPost("ResetPassword")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<bool>> ResetPassword(string email, string newPassword)
         {
             return await _service.ResetPasswordFromAPIAsync(email, newPassword);
@@ -148,7 +153,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
 
 
         [HttpGet("GetAccountByEmail/{email}")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<Account>> GetAccountByEmailFromAPIAsync(string email)
         {
             var account = await _service.GetUserByEmailFromAPIAsync(new Account() { Email = email });
@@ -160,7 +165,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("GetAccountById/{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<Account>> GetAccountByIdFromAPIAsync(string id)
         {
             var account = await _service.GetUserByIdFromAPIAsync(new Account() { Id = id });
@@ -173,7 +178,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
 
 
         [HttpGet("ViewAllAccount")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<IActionResult> ViewAllAccount()
         {
             try
@@ -186,9 +191,22 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             }
         }
 
+        [HttpGet("ViewAccountBuyerByOrderId")]
+        //[Authorize(Roles = ApplicationRoles.Shipper)]
+        public async Task<ActionResult<Account>> ViewAccountBuyerByOrderId(int orderId)
+        {
+            var order = await _orderService.SearchOrderByOrderIdFromAPIAsync(new Order() { OrderId = orderId });
+            if (order != null)
+            {
+                var buyer = await _service.GetUserByIdFromAPIAsync(new Account() { Id = order.BuyerId });
+                return buyer;
+            }
+            return BadRequest("Not found");
+        }
+
 
         [HttpGet("ViewAllAccount/{role}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<IActionResult> ViewAllAccountByRole(string role)
         {
 
@@ -196,11 +214,11 @@ namespace SWP391.EventFlowerExchange.API.Controllers
 
             if (accounts != null) return Ok(accounts);
 
-            return BadRequest("Not found"); 
+            return BadRequest("Not found");
         }
 
         [HttpGet("SearchAccounts/{address}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<IActionResult> SearchAccountsByAddress(string address)
         {
             var accounts = await _service.SearchAccountsByAddressFromAPIAsync(address);
@@ -211,7 +229,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("SearchShipper/{address}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<IActionResult> SearchShipperByAddress(string address)
         {
             var accounts = await _service.SearchShipperByAddressFromAPIAsync(address);
@@ -222,7 +240,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("SearchAccounts/{minSalary}/{maxSalary}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<IActionResult> SearchAccountsBySalary(float minSalary, float maxSalary)
         {
             if (minSalary < 0 || maxSalary < 0)
@@ -242,21 +260,38 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             return BadRequest("Not found!");
         }
 
-        [HttpPut("UpdateAccount")]
-        [Authorize]
-        public async Task<ActionResult<bool>> UpdateAccountFromAPIAsync(Account account)
+        [HttpPut("UpdateAccountImage")]
+        //[Authorize]
+        public async Task<ActionResult<bool>> UpdateAccountImageAsync(string email, string url)
         {
-            var user = await _service.GetUserByIdFromAPIAsync(new Account() { Id = account.Id });
+            var user = await _service.GetUserByEmailFromAPIAsync(new Account() { Email = email });
             if (user != null)
             {
-                await _service.UpdateAccountFromAPIAsync(account);
+                user.Picture = url;
+                await _service.UpdateAccountFromAPIAsync(user);
+                return true;
+            }
+            return false;
+        }
+
+        [HttpPut("UpdateAccount")]
+        //[Authorize]
+        public async Task<ActionResult<bool>> UpdateAccountFromAPIAsync(UpdateAccount account)
+        {
+            var user = await _service.GetUserByEmailFromAPIAsync(new Account() { Email = account.Email });
+            if (user != null)
+            {
+                user.Address = account.Address;
+                user.PhoneNumber = account.Phone;
+                user.Name = account.Name;
+                await _service.UpdateAccountFromAPIAsync(user);
                 return true;
             }
             return false;
         }
 
         [HttpDelete("RemoveAccount/{id}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<ActionResult<bool>> RemoveAccount(string id)
         {
             Account acc = new Account();
@@ -277,7 +312,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpDelete("DisableAccount/{id}")]
-        [Authorize(Roles = ApplicationRoles.Manager)]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
         public async Task<ActionResult<bool>> DeleteAccount(string id)
         {
             Account acc = new Account();
@@ -294,6 +329,5 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             }
             return false;
         }
-
     }
 }

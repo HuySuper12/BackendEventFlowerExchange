@@ -18,9 +18,10 @@ namespace SWP391.EventFlowerExchange.Application
             _repo = repo;
         }
 
-        public async Task<bool> CreateNewProductFromAPIAsync(CreateProduct product)
+        public async Task<bool> CreateNewProductFromAPIAsync(CreateProduct product, Account account)
         {
-            return await _repo.CreateNewProductAsync(product);
+
+            return await _repo.CreateNewProductAsync(product, account);
         }
 
         public async Task<List<GetProduct?>> GetEnableProductListFromAPIAsync()
@@ -63,38 +64,6 @@ namespace SWP391.EventFlowerExchange.Application
             return await _repo.SearchProductByNameAsync(name);
         }
 
-        public async Task<List<GetProduct?>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to)
-        {
-
-            return await _repo.SearchProductByPriceRangeAsync(from, to);
-        }
-
-        public async Task<List<GetProduct?>> SearchProductByComboType_EventsFromAPIAsync()
-        {
-            return await _repo.SearchProductByComboType_EventsAsync();
-        }
-
-        public async Task<List<GetProduct?>> SearchProductByComboType_BatchesFromAPIAsync()
-        {
-            return await _repo.SearchProductByComboType_BatchesAsync();
-        }
-
-        public async Task<List<GetProduct?>> SearchProductByCategory_WeddingFromAPIAsync()
-        {
-            return await _repo.SearchProductByCategory_WeddingAsync();
-
-        }
-
-        public async Task<List<GetProduct?>> SearchProductByCategory_ConferenceFromAPIAsync()
-        {
-            return await _repo.SearchProductByCategory_ConferenceAsync();
-        }
-
-        public async Task<List<GetProduct?>> SearchProductByCategory_BirthdayFromAPIAsync()
-        {
-            return await _repo.SearchProductByCategory_BirthdayAsync();
-        }
-
         public Task<List<GetProduct?>> GetLatestProductsFromAPIAsync()
         {
             return _repo.GetLatestProductsAsync();
@@ -103,6 +72,37 @@ namespace SWP391.EventFlowerExchange.Application
         public Task<List<GetProduct?>> GetOldestProductsFromAPIAsync()
         {
             return _repo.GetOldestProductsAsync();
+        }
+
+        //BỔ SUNG 
+        public Task<List<GetProduct?>> GetEnableProductListBySellerEmailFromAPIAsync(Account value)
+        {
+            return _repo.GetEnableProductListBySellerEmailAsync(value);
+        }
+
+        public Task<List<GetProduct?>> GetDisableProductListBySellerEmailFromAPIAsync(Account value)
+        {
+            return _repo.GetDisableProductListBySellerEmailAsync(value);
+        }
+
+        public Task<List<GetProduct?>> GetInProgressProductListBySellerEmailFromAPIAsync(Account value)
+        {
+            return GetInProgressProductListBySellerEmailFromAPIAsync(value);
+        }
+
+        public Task<bool> UpdateProductFromAPIAsync(GetProduct product)
+        {
+            return _repo.UpdateProductAsync(product);
+        }
+
+        public Task<ProductStatistics> GetAllOrdersAndRatingBySellerFromAPIEmailAsync(Account account)
+        {
+            return _repo.GetAllOrdersAndRatingBySellerEmail(account);
+        }
+
+        public Task<List<GetProduct?>> GetExpiredProductListBySellerEmailFromAPIAsync(Account value)
+        {
+            return _repo.GetExpiredProductListBySellerEmailAsync(value);
         }
     }
 }

@@ -32,5 +32,7 @@ namespace SWP391.EventFlowerExchange.Domain.Entities
 
         public DateTime? CreatedAt { get; set; }
 
+        public DateTime? ExpireddAt { get; set; }
+
     }
 }

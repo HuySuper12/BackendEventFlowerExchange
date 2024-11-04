@@ -19,9 +19,12 @@ public partial class ShopNotification
 
     public DateTime? CreatedAt { get; set; }
 
+    public virtual Follow? Follow { get; set; }
+
     public virtual Account? Follower { get; set; }
 
     public virtual Product? Product { get; set; }
 
     public virtual Account? Seller { get; set; }
+
 }

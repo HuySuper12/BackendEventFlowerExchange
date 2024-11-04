@@ -27,6 +27,8 @@ public partial class Product
 
     public DateTime? CreatedAt { get; set; }
 
+    public DateTime? ExpiredAt { get; set; }
+
     public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

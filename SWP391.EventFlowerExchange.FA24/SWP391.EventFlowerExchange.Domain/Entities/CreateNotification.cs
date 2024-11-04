@@ -10,7 +10,7 @@ namespace SWP391.EventFlowerExchange.Domain.Entities
     public class CreateNotification
     {
         [Required]
-        public string UserId { get; set; }
+        public string UserEmail { get; set; }
 
         [Required]
         [MaxLength(700)]  // Giới hạn độ dài của nội dung thông báo

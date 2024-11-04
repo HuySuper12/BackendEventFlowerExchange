@@ -18,14 +18,30 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("GetAllVoucher")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetAllVoucher()
         {
             return Ok(await _service.ViewAllVoucherFromAPIAsync());
         }
 
+        [HttpGet("GetAllVoucherValid")]
+        //[Authorize]
+        public async Task<IActionResult> GetAllVoucherValid(decimal price)
+        {
+            var list = await _service.ViewAllVoucherFromAPIAsync();
+            List<Voucher> listVoucher = new List<Voucher>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (DateTime.Now < list[i].ExpiryDate && price > list[i].MinOrderValue)
+                {
+                    listVoucher.Add(list[i]);
+                }
+            }
+            return Ok(listVoucher);
+        }
+
         [HttpGet("SearchVoucherById/{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> SearchVoucherByIdAsync(string id)
         {
             try
@@ -45,7 +61,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("SearchVoucherByCode/{code}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> SearchVoucherByCodeAsync(string code)
         {
             var result = await _service.SearchVoucherByCodeFromAPIAsync(code);
@@ -57,31 +73,32 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpPost("CreateVoucher")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<bool>> CreateVoucherAsync(CreateVoucher voucher)
         {
-            var result = await _service.CreateVoucherFromAPIAsync(voucher);
-            if (result == true)
+            var voucherResult = await _service.SearchVoucherByCodeFromAPIAsync(voucher.Code);
+            if (voucherResult == null)
             {
-                return true;
+                return await _service.CreateVoucherFromAPIAsync(voucher);
             }
             return false;
         }
 
         [HttpPut("UpdateVoucher")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<bool>> UpdateVoucherAsync(Voucher voucher)
         {
-            var result = await _service.UpdateVoucherFromAPIAsync(voucher);
-            if (result == true)
+            var searchVoucher = await _service.SearchVoucherByIdFromAPIAsync(new Voucher() { VoucherId = voucher.VoucherId });
+            if (searchVoucher != null)
             {
+                await _service.UpdateVoucherFromAPIAsync(voucher);
                 return true;
             }
             return false;
         }
 
         [HttpDelete("RemoveVoucher/{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<bool>> RemoveVoucherAsync(string id)
         {
             var voucher = await _service.SearchVoucherByIdFromAPIAsync(new Voucher() { VoucherId = int.Parse(id) });

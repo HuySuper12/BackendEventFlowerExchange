@@ -29,14 +29,16 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly SmtpSetting smtpSetting;
         private Swp391eventFlowerExchangePlatformContext _context;
+        private readonly IDeliveryLogRepository _deliveryLogRepository;
 
-        public AccountRepository(UserManager<Account> userManager, SignInManager<Account> signInManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager, IOptionsMonitor<SmtpSetting> smtpSetting)
+        public AccountRepository(UserManager<Account> userManager, SignInManager<Account> signInManager, IConfiguration configuration, RoleManager<IdentityRole> roleManager, IOptionsMonitor<SmtpSetting> smtpSetting, IDeliveryLogRepository deliveryLogRepository)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.configuration = configuration;
             this.roleManager = roleManager;
             this.smtpSetting = smtpSetting.CurrentValue;
+            _deliveryLogRepository = deliveryLogRepository;
         }
 
         // Login available account 
@@ -87,7 +89,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 return string.Empty;
             }
 
-            if(user.Status == false)
+            if (user.Status == false)
             {
                 return string.Empty;
             }
@@ -127,7 +129,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 Balance = 0,
                 Address = model.Address,
                 PhoneNumber = model.Phone,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.Now,
                 Status = true
             };
 
@@ -152,7 +154,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 UserName = model.Email,
                 Address = model.Address,
                 PhoneNumber = model.Phone,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.Now,
                 Status = true
             };
 
@@ -181,7 +183,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 Email = model.Email,
                 PhoneNumber = model.PhoneNumber,
                 Address = model.Address,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.Now,
                 Status = true
             };
 
@@ -209,7 +211,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 Email = model.Email,
                 PhoneNumber = model.PhoneNumber,
                 Address = model.Address,
-                CreatedAt = DateTime.UtcNow,
+                CreatedAt = DateTime.Now,
                 Status = true
             };
 
@@ -257,7 +259,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
             var otp = new Random().Next(100000, 999999).ToString();
 
             user.OtpCode = otp;
-            user.OtpExpiration = DateTime.UtcNow.AddMinutes(2);
+            user.OtpExpiration = DateTime.Now.AddMinutes(2);
             await userManager.UpdateAsync(user);
 
             string subject = "This is your OTP";
@@ -265,7 +267,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
             await SendEmailAsync(email, subject, message);
 
             return true;
-            
+
         }
 
         public async Task<bool> VerifyOTPAsync(string email, string otp)
@@ -276,7 +278,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 return false;
             }
 
-            if (user.OtpCode == otp && user.OtpExpiration > DateTime.UtcNow)
+            if (user.OtpCode == otp && user.OtpExpiration > DateTime.Now)
             {
                 return true;
             }
@@ -297,7 +299,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
             var result = await userManager.ResetPasswordAsync(user, token, newPassword); //Khi reset password, Identity yeu cau Generate ra chuoi Token
 
-            if (result.Succeeded) 
+            if (result.Succeeded)
             {
                 user.OtpCode = null;
                 user.OtpExpiration = null;
@@ -439,7 +441,6 @@ namespace SWP391.EventFlowerExchange.Infrastructure
 
         public async Task<List<Account>> SearchShipperByAddressAsync(string address)
         {
-
             _context = new Swp391eventFlowerExchangePlatformContext();
 
             var result = new List<Account>();
@@ -456,14 +457,16 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                     {
                         if (userRole.ToLower().Contains("shipper"))
                         {
-                            result.Add(account);
+                            if (await _deliveryLogRepository.CheckShipperIsFree(account))
+                            {
+                                result.Add(account);
+                            }
                         }
                     }
                 }
             }
 
-            return null;
-
+            return result;
         }
     }
 }

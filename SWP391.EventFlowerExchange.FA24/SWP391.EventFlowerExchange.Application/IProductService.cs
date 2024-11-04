@@ -18,29 +18,30 @@ namespace SWP391.EventFlowerExchange.Application
 
         public Task<List<GetProduct?>> GetRejectedProductListFromAPIAsync();
 
-        public Task<bool> CreateNewProductFromAPIAsync(CreateProduct product);
+        public Task<bool> CreateNewProductFromAPIAsync(CreateProduct product, Account account);
 
         public Task<bool> RemoveProductFromAPIAsync(GetProduct product);
-
-        public Task<List<GetProduct?>> SearchProductByPriceRangeFromAPIAsync(decimal from, decimal to);
 
         public Task<GetProduct?> SearchProductByIdFromAPIAsync(GetProduct product);
 
         public Task<List<GetProduct?>> SearchProductByNameFromAPIAsync(string name);
 
-        public Task<List<GetProduct?>> SearchProductByComboType_EventsFromAPIAsync();
-
-        public Task<List<GetProduct?>> SearchProductByComboType_BatchesFromAPIAsync();
-
-        public Task<List<GetProduct?>> SearchProductByCategory_WeddingFromAPIAsync();
-
-        public Task<List<GetProduct?>> SearchProductByCategory_ConferenceFromAPIAsync();
-
-        public Task<List<GetProduct?>> SearchProductByCategory_BirthdayFromAPIAsync();
-
         public Task<List<GetProduct?>> GetLatestProductsFromAPIAsync();
 
         public Task<List<GetProduct?>> GetOldestProductsFromAPIAsync();
+
+        //BỔ SUNG HÀM 
+
+        public Task<List<GetProduct?>> GetEnableProductListBySellerEmailFromAPIAsync(Account value);
+
+        public Task<List<GetProduct?>> GetDisableProductListBySellerEmailFromAPIAsync(Account value);
+
+        public Task<List<GetProduct?>> GetExpiredProductListBySellerEmailFromAPIAsync(Account value);
+
+        public Task<bool> UpdateProductFromAPIAsync(GetProduct product);
+
+        public Task<ProductStatistics> GetAllOrdersAndRatingBySellerFromAPIEmailAsync(Account account);
+
 
     }
 }

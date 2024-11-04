@@ -17,15 +17,16 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         public async Task<bool> CreateVoucherAsync(CreateVoucher createVoucher)
         {
             _context = new Swp391eventFlowerExchangePlatformContext();
+            var discount = createVoucher.DiscountValue / 100;
             Voucher voucher = new Voucher()
             {
-                Code = createVoucher.Code,
+                Code = createVoucher.Code.ToUpper(),
                 Description = createVoucher.Description,
                 MinOrderValue = createVoucher.MinOrderValue,
-                StartDate = DateTime.UtcNow,
-                ExpiryDate = DateTime.UtcNow.AddDays(createVoucher.ExpiryDate),
-                DiscountValue = createVoucher.DiscountValue,
-                CreatedAt = DateTime.UtcNow,
+                StartDate = DateTime.Now,
+                ExpiryDate = DateTime.Now.AddDays(createVoucher.ExpiryDate),
+                DiscountValue = discount,
+                CreatedAt = DateTime.Now,
             };
             _context.Vouchers.Add(voucher);
             await _context.SaveChangesAsync();

@@ -10,7 +10,7 @@ namespace SWP391.EventFlowerExchange.Domain.Entities
     public class CreateProduct
     {
         [Required]
-        public string? SellerId { get; set; }
+        public string? SellerEmail { get; set; }
 
         [Required]
         public string? ProductName { get; set; }
@@ -32,9 +32,6 @@ namespace SWP391.EventFlowerExchange.Domain.Entities
 
         [Required]
         public string? Category { get; set; }
-
-        [Required]
-        public DateTime? CreatedAt { get; set; }
 
         public List<string>? ListImage { get; set; }
     }

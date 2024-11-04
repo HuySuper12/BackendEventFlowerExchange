@@ -102,7 +102,7 @@ namespace SWP391.EventFlowerExchange.Application
 
             foreach (var role in userRoles)
             {
-                if (role.ToLower().Contains("admin")
+                if (role.ToLower().Contains("staff")
                     || role.ToLower().Contains("shipper"))
                 {
                     await _repo.RemoveAccountAsync(account);

@@ -7,9 +7,9 @@ public partial class CartItem
 {
     public int CartId { get; set; }
 
-    public string? BuyerId { get; set; }
-
     public int ProductId { get; set; }
+
+    public string BuyerId { get; set; } = null!;
 
     public int? Quantity { get; set; }
 
@@ -17,7 +17,9 @@ public partial class CartItem
 
     public DateTime? CreatedAt { get; set; }
 
-    public virtual Cart? Cart { get; set; }
+    public string? ProductImage { get; set; }
+
+    public virtual Cart Cart { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 }

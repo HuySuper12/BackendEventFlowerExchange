@@ -18,6 +18,7 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
         : base(options)
     {
     }
+    public virtual DbSet<Follow> Follows { get; set; }
 
     public virtual DbSet<Account> Accounts { get; set; }
 
@@ -45,8 +46,9 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
     public virtual DbSet<Voucher> Vouchers { get; set; }
 
-    public virtual DbSet<ImageProduct> ImageProducts { get; set; }
+    public virtual DbSet<Payment> Payments { get; set; }
 
+    public virtual DbSet<ImageProduct> ImageProducts { get; set; }
 
     private string GetConnectionString()
     {
@@ -59,7 +61,6 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer(GetConnectionString());
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -102,13 +103,31 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
         //    entity.Property(e => e.Status).HasColumnName("status");
         //});
 
+        modelBuilder.Entity<Follow>(entity =>
+        {
+            entity.HasKey(e => e.FollowId).HasName("PK__Follow__15A691443703BF66");
+
+            entity.ToTable("Follow");
+
+            entity.HasIndex(e => new { e.FollowerId, e.SellerId }, "IX_Follow_Unique").IsUnique();
+
+            entity.Property(e => e.FollowId).HasColumnName("follow_id");
+            entity.Property(e => e.FollowerId).HasColumnName("follower_id");
+            entity.Property(e => e.SellerId).HasColumnName("seller_id");
+
+            entity.HasOne(d => d.Seller).WithMany(p => p.Follows)
+                .HasForeignKey(d => d.SellerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Follow__seller_i__395884C4");
+        });
+
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.HasKey(e => new { e.CartId, e.BuyerId }).HasName("PK__Cart__15583D3220AC18D4");
 
             entity.ToTable("Cart");
 
-            entity.Property(e => e.CartId).HasColumnName("cart_id");
+            entity.Property(e => e.CartId).HasColumnName("cart_id").ValueGeneratedOnAdd();
             entity.Property(e => e.BuyerId).HasColumnName("buyer_id");
 
             entity.HasOne(d => d.Buyer).WithMany(p => p.Carts)
@@ -154,6 +173,12 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+            entity.Property(e => e.TakeOverAt)
+                .HasColumnType("datetime")
+                .HasColumnName("takeover_at");
+            entity.Property(e => e.DeliveryAt)
+                .HasColumnType("datetime")
+                .HasColumnName("delivery_at");
             entity.Property(e => e.DeliveryPersonId).HasColumnName("delivery_person_id");
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.PhotoUrl)
@@ -209,16 +234,19 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+            entity.Property(e => e.UpdateAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updated_at");
             entity.Property(e => e.DeliveredAt)
                 .HasColumnName("delivered_at");
-            entity.Property(e => e.PhoneNumber)
-                .HasColumnName("phoneNumber");
             entity.Property(e => e.DeliveryPersonId).HasColumnName("delivery_person_id");
             entity.Property(e => e.IssueReport).HasColumnName("issue_report");
             entity.Property(e => e.SellerId).HasColumnName("seller_id");
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .HasColumnName("status");
+            entity.Property(e => e.PhoneNumber)
+                .HasColumnName("phoneNumber");
             entity.Property(e => e.TotalPrice)
                 .HasColumnType("decimal(18, 2)")
                 .HasColumnName("total_price");
@@ -278,6 +306,9 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
+            entity.Property(e => e.ExpiredAt)
+                .HasColumnType("datetime")
+                .HasColumnName("expired_at");
             entity.Property(e => e.FreshnessDuration).HasColumnName("freshness_duration");
             entity.Property(e => e.Price)
                 .HasColumnType("decimal(18, 2)")
@@ -290,11 +321,6 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .HasColumnName("status");
-            entity.Property(e => e.Description)
-                .HasColumnName("description");
-            entity.Property(e => e.Category)
-                .HasMaxLength(50)
-                .HasColumnName("category");
 
             entity.HasOne(d => d.Seller).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SellerId)
@@ -322,7 +348,7 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .HasColumnName("status");
-            entity.Property(e => e.TransactionId).HasColumnName("transaction_id");
+            entity.Property(e => e.PaymentId).HasColumnName("payment_id");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
@@ -332,9 +358,49 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
                 .HasForeignKey(d => d.ProductId)
                 .HasConstraintName("FK__Request__product__6383C8BA");
 
-            entity.HasOne(d => d.Transaction).WithMany(p => p.Requests)
-                .HasForeignKey(d => d.TransactionId)
-                .HasConstraintName("FK__Request__transac__628FA481");
+            entity.HasOne(d => d.Payment).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.PaymentId)
+                .HasConstraintName("FK_Request_Payment");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__Request__user_id__619B8048");
+        });
+
+        modelBuilder.Entity<Request>(entity =>
+        {
+            entity.HasKey(e => e.RequestId).HasName("PK__Request__18D3B90FFFABB483");
+
+            entity.ToTable("Request");
+
+            entity.Property(e => e.RequestId).HasColumnName("request_id");
+            entity.Property(e => e.Amount)
+                .HasColumnType("decimal(18, 2)")
+                .HasColumnName("amount");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.ProductId).HasColumnName("product_id");
+            entity.Property(e => e.RequestType)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("request_type");
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .HasColumnName("status");
+            entity.Property(e => e.PaymentId).HasColumnName("payment_id");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updated_at");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("FK__Request__product__6383C8BA");
+
+            entity.HasOne(d => d.Payment).WithMany(p => p.Requests)
+                .HasForeignKey(d => d.PaymentId)
+                .HasConstraintName("FK_Request_Payment");
 
             entity.HasOne(d => d.User).WithMany(p => p.Requests)
                 .HasForeignKey(d => d.UserId)
@@ -371,6 +437,12 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
             entity.ToTable("Shop_Notification");
 
+            entity.HasIndex(e => e.FollowerId, "IX_Shop_Notification_follower_id");
+
+            entity.HasIndex(e => e.ProductId, "IX_Shop_Notification_product_id");
+
+            entity.HasIndex(e => e.SellerId, "IX_Shop_Notification_seller_id");
+
             entity.Property(e => e.ShopNotificationId).HasColumnName("shop_notification_id");
             entity.Property(e => e.Content)
                 .HasColumnType("text")
@@ -387,7 +459,8 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
             entity.HasOne(d => d.Follower).WithMany(p => p.ShopNotificationFollowers)
                 .HasForeignKey(d => d.FollowerId)
-                .HasConstraintName("FK__Shop_Noti__follo__5629CD9C");
+                .OnDelete(DeleteBehavior.SetNull) // Thay đổi hành vi xóa thành SetNull
+                .HasConstraintName("FK_Shop_Notification_Account");
 
             entity.HasOne(d => d.Product).WithMany(p => p.ShopNotifications)
                 .HasForeignKey(d => d.ProductId)
@@ -395,7 +468,14 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
             entity.HasOne(d => d.Seller).WithMany(p => p.ShopNotificationSellers)
                 .HasForeignKey(d => d.SellerId)
-                .HasConstraintName("FK__Shop_Noti__selle__571DF1D5");
+                .OnDelete(DeleteBehavior.SetNull) // Thay đổi hành vi xóa thành SetNull
+                .HasConstraintName("FK_Shop_Notification_Account2");
+
+            entity.HasOne(d => d.Follow).WithMany(p => p.ShopNotifications)
+                .HasPrincipalKey(p => new { p.FollowerId, p.SellerId })
+                .HasForeignKey(d => new { d.FollowerId, d.SellerId })
+                .OnDelete(DeleteBehavior.SetNull) // Thay đổi hành vi xóa thành SetNull
+                .HasConstraintName("FK_Shop_Notification_Follow");
         });
 
         modelBuilder.Entity<Transaction>(entity =>
@@ -464,8 +544,40 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
                 .HasColumnName("updated_at");
         });
 
+        modelBuilder.Entity<Payment>(entity =>
+        {
+            entity.HasKey(e => e.PaymentId).HasName("PK__Payment__ED1FC9EA4938E930");
+
+            entity.ToTable("Payment");
+
+            entity.Property(e => e.PaymentId).HasColumnName("payment_id");
+            entity.Property(e => e.Amount)
+                .HasColumnType("decimal(18, 2)")
+                .HasColumnName("amount");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.Status).HasColumnName("status");
+            entity.Property(e => e.PaymentCode)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("payment_code");
+            entity.Property(e => e.PaymentContent)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("payment_content");
+            entity.Property(e => e.PaymentType).HasColumnName("payment_type");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Payment)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK_Payment_Account");
+        });
+
         modelBuilder.Entity<ImageProduct>(entity =>
         {
+            entity.ToTable("ImageProduct");
+
             entity.HasKey(e => e.Id).HasName("PK__ImagePro__3213E83FBC8D53A3");
 
             entity.Property(e => e.LinkImage).HasMaxLength(450);

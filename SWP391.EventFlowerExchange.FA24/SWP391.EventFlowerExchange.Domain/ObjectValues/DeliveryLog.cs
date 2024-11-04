@@ -18,6 +18,8 @@ public partial class DeliveryLog
     public string? PhotoUrl { get; set; }
 
     public DateTime? CreatedAt { get; set; }
+    public DateTime? TakeOverAt { get; set; }
+    public DateTime? DeliveryAt { get; set; }
 
     public virtual Account? DeliveryPerson { get; set; }
 

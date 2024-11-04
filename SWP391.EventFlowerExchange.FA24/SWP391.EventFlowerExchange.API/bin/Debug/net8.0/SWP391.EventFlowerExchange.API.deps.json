@@ -1053,7 +1053,10 @@
           "SWP391.EventFlowerExchange.Infrastructure": "1.0.0"
         },
         "runtime": {
-          "SWP391.EventFlowerExchange.Application.dll": {}
+          "SWP391.EventFlowerExchange.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SWP391.EventFlowerExchange.Domain/1.0.0": {
@@ -1066,7 +1069,10 @@
           "Microsoft.Extensions.Configuration.Json": "8.0.0"
         },
         "runtime": {
-          "SWP391.EventFlowerExchange.Domain.dll": {}
+          "SWP391.EventFlowerExchange.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SWP391.EventFlowerExchange.Infrastructure/1.0.0": {
@@ -1076,7 +1082,10 @@
           "SWP391.EventFlowerExchange.Domain": "1.0.0"
         },
         "runtime": {
-          "SWP391.EventFlowerExchange.Infrastructure.dll": {}
+          "SWP391.EventFlowerExchange.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

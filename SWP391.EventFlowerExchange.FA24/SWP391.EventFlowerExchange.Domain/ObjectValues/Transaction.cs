@@ -25,7 +25,5 @@ public partial class Transaction
 
     public virtual Order? Order { get; set; }
 
-    public virtual ICollection<Request> Requests { get; set; } = new List<Request>();
-
     public virtual Account? User { get; set; }
 }

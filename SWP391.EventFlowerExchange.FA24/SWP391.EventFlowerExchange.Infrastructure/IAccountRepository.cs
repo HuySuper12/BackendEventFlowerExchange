@@ -16,7 +16,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         public Task<IdentityResult> SignUpSellerAsync(SignUpSeller signUp);
         public Task<IdentityResult> CreateStaffAccountAsync(SignUpStaff staff);
         public Task<IdentityResult> CreateShipperAccountAsync(SignUpShipper shipper);
-        
+
         //Login
         public Task<string> SignInAsync(SignIn signIn);
         public Task<string> SignInEmailAsync(SignIn signIn);

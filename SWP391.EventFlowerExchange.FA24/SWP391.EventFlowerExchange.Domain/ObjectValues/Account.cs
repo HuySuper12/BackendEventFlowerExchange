@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SWP391.EventFlowerExchange.Domain.ObjectValues;
 
@@ -9,6 +10,8 @@ public class Account : IdentityUser
     //public int UserId { get; set; }//
 
     public string? Name { get; set; }
+
+    public string? Picture { get; set; }
 
     //public string? Email { get; set; }//
 
@@ -31,6 +34,8 @@ public class Account : IdentityUser
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
 
+    public virtual ICollection<Follow> Follows { get; set; } = new List<Follow>();
+
     public virtual ICollection<DeliveryLog> DeliveryLogs { get; set; } = new List<DeliveryLog>();
 
     public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
@@ -47,9 +52,12 @@ public class Account : IdentityUser
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
+    [NotMapped]
     public virtual ICollection<ShopNotification> ShopNotificationFollowers { get; set; } = new List<ShopNotification>();
 
     public virtual ICollection<ShopNotification> ShopNotificationSellers { get; set; } = new List<ShopNotification>();
 
     public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
+    public virtual ICollection<Payment> Payment { get; set; } = new List<Payment>();
+
 }

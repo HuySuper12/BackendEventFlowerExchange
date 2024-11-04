@@ -18,13 +18,13 @@ public partial class Order
     public string? Status { get; set; }
 
     public DateTime? CreatedAt { get; set; }
-
+    public DateTime? UpdateAt { get; set; }
     public string? DeliveredAt { get; set; }
+
+    public string? IssueReport { get; set; }
     public string? PhoneNumber { get; set; }
 
     public int? VoucherId { get; set; }
-
-    public string? IssueReport { get; set; }
 
     public virtual Account? Buyer { get; set; }
 

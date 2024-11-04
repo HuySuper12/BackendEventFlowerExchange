@@ -13,9 +13,16 @@ namespace SWP391.EventFlowerExchange.API.Controllers
     public class ProductController : ControllerBase
     {
         private IProductService _service;
-        public ProductController(IProductService service)
+        private IAccountService _account;
+        private IConfiguration _config;
+        private IRequestService _requestService;
+
+        public ProductController(IProductService service, IConfiguration config, IAccountService account, IRequestService requestService)
         {
             _service = service;
+            _account = account;
+            _config = config;
+            _requestService = requestService;
         }
 
 
@@ -24,6 +31,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         public async Task<IActionResult> GetAllEnableProductList()
         {
             return Ok(await _service.GetEnableProductListFromAPIAsync());
+
         }
 
 
@@ -51,35 +59,112 @@ namespace SWP391.EventFlowerExchange.API.Controllers
         }
 
         [HttpGet("GetProductList/Latest")]
-        public async Task<IActionResult> GetLatestProducts()
+        public async Task<IActionResult> GetLatestProductList()
         {
             var products = await _service.GetLatestProductsFromAPIAsync();
             if (products == null || !products.Any())
             {
-                return BadRequest(NotFound());
+                return NotFound();
             }
             return Ok(products);
         }
 
         [HttpGet("GetProductList/Oldest")]
-        public async Task<IActionResult> GetOldestProducts()
+        public async Task<IActionResult> GetOldestProductList()
         {
             var products = await _service.GetOldestProductsFromAPIAsync();
             if (products == null || !products.Any())
             {
-                return BadRequest(NotFound());
+                return NotFound();
             }
             return Ok(products);
         }
 
-        [HttpGet("SearchProduct/{id:int}")]
+
+        //BỔ SUNG API
+        [HttpGet("GetProductList/EnableAndDisable")]
+        //[Authorize]
+        public async Task<IActionResult> GetEnableAndDisableProductList()
+        {
+            var disable = await _service.GetDisableProductListFromAPIAsync();
+            var enable = await _service.GetEnableProductListFromAPIAsync();
+            var combinedList = enable.Concat(disable).ToList();
+            return Ok(combinedList);
+
+        }
+
+        [HttpGet("GetProductList/Enable/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<IActionResult> GetEnableProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            //var list = await _service.GetEnableProductListFromAPIAsync();
+            //var filter = list.Where(p => p.SellerId.Contains(acc.Id)).ToList();
+            var filter = await _service.GetEnableProductListBySellerEmailFromAPIAsync(acc);
+            return Ok(filter);
+        }
+
+
+        [HttpGet("GetProductList/Disable/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<IActionResult> GetDisableProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            //var list = await _service.GetDisableProductListFromAPIAsync();
+            //var filter = list.Where(p => p.SellerId.Contains(acc.Id)).ToList();
+
+            var filter = await _service.GetDisableProductListBySellerEmailFromAPIAsync(acc);
+            return Ok(filter);
+        }
+
+
+        [HttpGet("GetProductList/InProgress/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<IActionResult> GetInProgressProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            var list = await _service.GetInProgressProductListFromAPIAsync();
+            var filter = list.Where(p => p.SellerId.Contains(acc.Id)).ToList();
+            return Ok(filter);
+        }
+
+
+        [HttpGet("GetProductList/Rejected/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller + "," + ApplicationRoles.Admin)]
+        public async Task<IActionResult> GetRejectedProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            var list = await _service.GetRejectedProductListFromAPIAsync();
+            var filter = list.Where(p => p.SellerId.Contains(acc.Id)).ToList();
+            return Ok(filter);
+        }
+
+        [HttpGet("GetProductList/Expired/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller + "," + ApplicationRoles.Admin)]
+        public async Task<IActionResult> GetExpiredProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            return Ok(await _service.GetExpiredProductListBySellerEmailFromAPIAsync(acc));
+        }
+
+        [HttpGet("GetProductList/Deal/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<IActionResult> GetDealProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            var list = await _service.GetEnableProductListFromAPIAsync();
+            var filter = list.Where(p => p.SellerId.Contains(acc.Id) && p.Price == 0).ToList();
+            return Ok(filter);
+        }
+
+        [HttpGet("SearchProduct")]
         public async Task<IActionResult> SearchProductByID(int id)
         {
             GetProduct product = new GetProduct() { ProductId = id };
             var checkProduct = await _service.SearchProductByIdFromAPIAsync(product);
             if (checkProduct == null)
             {
-                return BadRequest(NotFound());
+                return NotFound();
             }
             return Ok(checkProduct);
         }
@@ -90,98 +175,38 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             var checkProduct = await _service.SearchProductByNameFromAPIAsync(name);
             if (checkProduct == null)
             {
-                return BadRequest(NotFound());
+                return NotFound();
             }
             return Ok(checkProduct);
         }
 
-        [HttpGet("SearchProducts/ComboType/Batches")]
-        public async Task<IActionResult> SearchProductByComboType_Batches()
+
+        [HttpGet("GetOrdersAndRatingBySellerEmail")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+
+        public async Task<IActionResult> GetOrdersAndRatingBySellerEmail(string email)
         {
-            var checkProduct = await _service.SearchProductByComboType_BatchesFromAPIAsync();
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            return Ok(await _service.GetAllOrdersAndRatingBySellerFromAPIEmailAsync(acc));
         }
-
-        [HttpGet("SearchProducts/ComboType/Events")]
-        public async Task<IActionResult> SearchProductByComboType_Events()
-        {
-            var checkProduct = await _service.SearchProductByComboType_EventsFromAPIAsync();
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
-        }
-
-        [HttpGet("SearchProducts/Category/Wedding")]
-        public async Task<IActionResult> SearchProductByCategory_Wedding()
-        {
-            var checkProduct = await _service.SearchProductByCategory_WeddingFromAPIAsync();
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
-        }
-
-        [HttpGet("SearchProducts/Category/Conference")]
-        public async Task<IActionResult> SearchProductByCategory_Conference()
-        {
-            var checkProduct = await _service.SearchProductByCategory_ConferenceFromAPIAsync();
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
-        }
-
-        [HttpGet("SearchProducts/Category/Birthday")]
-        public async Task<IActionResult> SearchProductByCategory_Birthday()
-        {
-            var checkProduct = await _service.SearchProductByCategory_BirthdayFromAPIAsync();
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
-        }
-
-        [HttpGet("SearchProductsByPriceRange/{from},{to}")]
-        public async Task<IActionResult> SearchProductByPriceRange(decimal from, decimal to)
-        {
-            if (from < 0 || to < 0)
-            {
-                return BadRequest("minPrice or maxPrice must not be negative number");
-            }
-
-            if (from > to)
-            {
-                return BadRequest("minPrice must be less than or equal to maxPrice");
-            }
-            var checkProduct = await _service.SearchProductByPriceRangeFromAPIAsync(from, to);
-            if (checkProduct == null)
-            {
-                return BadRequest(NotFound());
-            }
-            return Ok(checkProduct);
-        }
-
-
 
         [HttpPost("CreateProduct")]
         //[Authorize(Roles = ApplicationRoles.Seller)]
         public async Task<ActionResult<bool>> CreateNewProduct(CreateProduct product)
         {
-            var check = await _service.CreateNewProductFromAPIAsync(product);
-            if (check)
-            {
-                return true;
-            }
-            return false;
+            var account = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = product.SellerEmail });
+            return await _service.CreateNewProductFromAPIAsync(product, account);
+
+        }
+
+        [HttpPut("UpdateProduct/{id}, {status}")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<ActionResult<bool>> UpdateProduct(int id, string status)
+        {
+            var product = await _service.SearchProductByIdFromAPIAsync(new GetProduct() { ProductId = id });
+            product.Status = status;
+            return await _service.UpdateProductFromAPIAsync(product);
+
         }
 
         [HttpDelete("{id}")]
