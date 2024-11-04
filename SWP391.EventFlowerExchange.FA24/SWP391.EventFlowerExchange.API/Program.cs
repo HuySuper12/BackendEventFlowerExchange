@@ -78,12 +78,42 @@ namespace SWP391.EventFlowerExchange.API
             //Dependency Injection
             builder.Services.AddScoped<IAccountRepository, AccountRepository>();
             builder.Services.AddScoped<IAccountService, AccountService>();
+
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<IProductService, ProductService>();
+
+            builder.Services.AddScoped<ICartRepository, CartRepository>();
+            builder.Services.AddScoped<ICartService, CartService>();
+
+            builder.Services.AddScoped<IRatingService, RatingService>();
+            builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+
             builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
             builder.Services.AddScoped<INotificationService, NotificationService>();
+
+            builder.Services.AddScoped<IFollowService, FollowService>();
+            builder.Services.AddScoped<IFollowRepository, FollowRepository>();
+
+            builder.Services.AddScoped<IVnPayService, VnPayService>();
+            builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+
+            builder.Services.AddScoped<IRequestRepository, RequestRepository>();
+            builder.Services.AddScoped<IRequestService, RequestService>();
+
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+
+            builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+            builder.Services.AddScoped<ITransactionService, TransactionService>();
+
+            builder.Services.AddScoped<IDeliveryLogRepository, DeliveryLogRepository>();
+            builder.Services.AddScoped<IDeliveryLogService, DeliveryLogService>();
+
             builder.Services.AddScoped<IVoucherRepository, VoucherRepository>();
             builder.Services.AddScoped<IVoucherService, VoucherService>();
+
+            builder.Services.AddScoped<IRefundRepository, RefundRepository>();
+            builder.Services.AddScoped<IRefundService, RefundService>();
 
             // Add DbContext
             builder.Services.AddDbContext<Swp391eventFlowerExchangePlatformContext>(options =>
