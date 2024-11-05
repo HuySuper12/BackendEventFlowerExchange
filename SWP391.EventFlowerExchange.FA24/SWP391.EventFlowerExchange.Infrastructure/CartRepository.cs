@@ -97,21 +97,29 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 foreach (var item in cart)
                 {
                     var product = _context.Products.FirstOrDefault(x => x.ProductId == item.ProductId);
-                    var cartItem = new GetCartItem
+
+                    if (product.Status == "Disable" || product.Status == "Expired")
                     {
-                        CartId = item.CartId,
-                        ProductId = item.ProductId,
-                        BuyerId = item.BuyerId,
-                        Quantity = item.Quantity,
-                        Price = item.Price,
-                        CreatedAt = item.CreatedAt,
-                        ProductImage = item.ProductImage,
-                        ComboType = product.ComboType,
-                        ProductName = product.ProductName,
+                        await this.RemoveItemFromCartAsync(item);
+                    }
+                    else
+                    {
+                        var cartItem = new GetCartItem
+                        {
+                            CartId = item.CartId,
+                            ProductId = item.ProductId,
+                            BuyerId = item.BuyerId,
+                            Quantity = item.Quantity,
+                            Price = item.Price,
+                            CreatedAt = item.CreatedAt,
+                            ProductImage = item.ProductImage,
+                            ComboType = product.ComboType,
+                            ProductName = product.ProductName,
 
-                    };
+                        };
 
-                    cartItems.Add(cartItem);
+                        cartItems.Add(cartItem);
+                    }
                 }
 
                 return cartItems;

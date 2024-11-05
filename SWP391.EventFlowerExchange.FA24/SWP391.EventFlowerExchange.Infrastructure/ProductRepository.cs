@@ -16,15 +16,13 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         private IRequestRepository _request;
         private IFollowRepository _follow;
         private INotificationRepository _notification;
-        private ICartRepository _cart;
 
 
-        public ProductRepository(IRequestRepository request, IFollowRepository follow, INotificationRepository notification, ICartRepository cart)
+        public ProductRepository(IRequestRepository request, IFollowRepository follow, INotificationRepository notification)
         {
             _request = request;
             _follow = follow;
             _notification = notification;
-            _cart = cart;
         }
 
         private GetProduct ConvertProductToGetProduct(Product value)
@@ -83,8 +81,6 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                     list[i].Status = "Expired";
                     _context.Products.Update(list[i]);
                     _context.SaveChanges();
-
-                    _cart.RemoveCartItemToCreateOrderAsync(new CartItem() { ProductId = list[i].ProductId });
                 }
             }
         }
@@ -211,8 +207,6 @@ namespace SWP391.EventFlowerExchange.Infrastructure
             _context = new Swp391eventFlowerExchangePlatformContext();
             _context.Products.Update(newProduct);
             await _context.SaveChangesAsync();
-
-            await _cart.RemoveCartItemToCreateOrderAsync(new CartItem() { ProductId = newProduct.ProductId });
             return true;
         }
 
