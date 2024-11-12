@@ -50,6 +50,8 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
 
     public virtual DbSet<ImageProduct> ImageProducts { get; set; }
 
+    public virtual DbSet<Message> Messages { get; set; }
+
     private string GetConnectionString()
     {
         IConfiguration config = new ConfigurationBuilder()
@@ -119,6 +121,38 @@ public partial class Swp391eventFlowerExchangePlatformContext : IdentityDbContex
                 .HasForeignKey(d => d.SellerId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Follow__seller_i__395884C4");
+        });
+
+        modelBuilder.Entity<Message>(entity =>
+        {
+            entity.HasKey(e => e.MessageId).HasName("PK_Messages");
+
+            entity.ToTable("Message");
+
+            entity.Property(e => e.MessageId).HasColumnName("message_id");
+            entity.Property(e => e.Contents)
+                .HasColumnType("text")
+                .HasColumnName("contents");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.NotificationId).HasColumnName("notification_id");
+            entity.Property(e => e.ReceiverId)
+                .HasMaxLength(450)
+                .HasColumnName("receiver_id");
+            entity.Property(e => e.SenderId)
+                .HasMaxLength(450)
+                .HasColumnName("sender_id");
+
+            entity.HasOne(d => d.Notification).WithMany(p => p.Messages)
+                .HasForeignKey(d => d.NotificationId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Message_Notification");
+
+            entity.HasOne(d => d.Sender).WithMany(p => p.Messages)
+                .HasForeignKey(d => d.SenderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Message_Account");
         });
 
         modelBuilder.Entity<Cart>(entity =>

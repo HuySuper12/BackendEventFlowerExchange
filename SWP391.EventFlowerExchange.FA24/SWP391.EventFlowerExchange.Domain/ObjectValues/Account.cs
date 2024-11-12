@@ -55,6 +55,8 @@ public class Account : IdentityUser
     [NotMapped]
     public virtual ICollection<ShopNotification> ShopNotificationFollowers { get; set; } = new List<ShopNotification>();
 
+    public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
+
     public virtual ICollection<ShopNotification> ShopNotificationSellers { get; set; } = new List<ShopNotification>();
 
     public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();

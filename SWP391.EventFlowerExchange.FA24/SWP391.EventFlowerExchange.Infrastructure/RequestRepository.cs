@@ -40,7 +40,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 RequestType = value.RequestType,
                 Status = value.Status,
                 CreatedAt = value.CreatedAt,
-
+                Reason = value.Reason
             };
             _context = new Swp391eventFlowerExchangePlatformContext();
             _context.Requests.Add(request);

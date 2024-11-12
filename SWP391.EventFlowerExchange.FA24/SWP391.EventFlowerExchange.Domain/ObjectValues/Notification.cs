@@ -16,4 +16,6 @@ public partial class Notification
     public DateTime? CreatedAt { get; set; }
 
     public virtual Account? User { get; set; }
+
+    public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
 }
