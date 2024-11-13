@@ -70,7 +70,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
                 {
                     return Redirect("https://eventflowerexchange.vercel.app/failed-transaction");
                 }
-                return Redirect("https://eventflowerexchange.vercel.app/admin/request-pending");
+                return Redirect("https://eventflowerexchange.vercel.app");
             }
             var account = await _accountService.GetUserByIdFromAPIAsync(new Account() { Id = response.UserId });
 
@@ -83,8 +83,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
                 // Here you can save the order to the database if needed
                 await _vnPayservice.CreatePaymentFromAPIAsync(response);
                 await _accountService.UpdateAccountFromAPIAsync(account);
-                return Redirect("https://eventflowerexchange.vercel.app/success-transaction");
-
+                return Redirect("https://eventflowerexchange.vercel.app");
             }
             else //RUT TIEN
             {
