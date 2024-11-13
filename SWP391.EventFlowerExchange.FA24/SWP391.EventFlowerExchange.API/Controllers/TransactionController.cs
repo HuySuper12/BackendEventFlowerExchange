@@ -74,7 +74,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             return Ok(await _service.ViewTransactionByCodeFromAPIAsync(new Transaction() { TransactionCode = code }));
         }
 
-        [HttpGet("ViewAllTransactionByUserIdAndOrderId")]
+        [HttpGet("ViewAllTransactionByUserIdAndOrderId/{orderId}")]
         //[Authorize]
         public async Task<IActionResult> ViewAllTransactionByUserIdAndOrderIdAsync(int orderId)
         {

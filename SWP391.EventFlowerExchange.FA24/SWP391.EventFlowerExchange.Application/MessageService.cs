@@ -27,5 +27,16 @@ namespace SWP391.EventFlowerExchange.Application
         {
             return await _repo.GetMessagesByReceiverIdAsync(sender, receiver);
         }
+
+        public async Task<List<string>> GetMessagesBySenderIdFromApiAsync(Account sender)
+        {
+            return await _repo.GetMessagesBySenderIdAsync(sender);
+        }
+
+        public async Task<List<string>> GetMessagesByReceiveIFromApiAsync(Account receiver)
+        {
+            return await _repo.GetMessagesByReceiveIdAsync(receiver);
+        }
+
     }
 }

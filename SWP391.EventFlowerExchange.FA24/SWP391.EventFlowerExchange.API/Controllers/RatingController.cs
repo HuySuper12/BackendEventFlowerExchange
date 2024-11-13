@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using SWP391.EventFlowerExchange.Application;
 using SWP391.EventFlowerExchange.Domain.Entities;
 using SWP391.EventFlowerExchange.Domain.ObjectValues;
@@ -74,6 +75,47 @@ namespace SWP391.EventFlowerExchange.API.Controllers
                     return true;
                 }
                 return false;
+            }
+
+            return false;
+        }
+
+        [HttpGet("CheckRatingByUserEmail")]
+        //[Authorize]
+        public async Task<bool> CheckRatingByUserEmail(string email, int orderId)
+        {
+
+
+            if (!email.IsNullOrEmpty() || !(orderId == null))
+            {
+                Account account = new Account() { Email = email };
+                Order order = new Order() { OrderId = orderId };
+                var result = await _service.ViewAllRatingByUserIdFromApiAsync(account);
+                if (result != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        [HttpGet("CheckRatingByOrderId")]
+        //[Authorize]
+        public async Task<bool> CheckRatingByOrderId(string email, int orderId)
+        {
+
+
+            if (!email.IsNullOrEmpty() || !(orderId == null))
+            {
+                Account account = new Account() { Email = email };
+                Account check = await _accountService.GetUserByEmailFromAPIAsync(account);
+                Order order = new Order() { OrderId = orderId };
+                var result = await _service.CheckRatingOrderByOrderIdFromAPIAsync(check, order);
+                if (result == true)
+                {
+                    return true;
+                }
             }
 
             return false;

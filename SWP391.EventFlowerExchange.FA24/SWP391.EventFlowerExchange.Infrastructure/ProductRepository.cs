@@ -281,6 +281,22 @@ namespace SWP391.EventFlowerExchange.Infrastructure
 
         //BỔ SUNG THÊM HÀM
 
+        public async Task<List<GetProduct?>> GetBannedProductListBySellerEmailAsync(Account value)
+        {
+            string status = "Banned";
+            _context = new Swp391eventFlowerExchangePlatformContext();
+            var productList = await _context.Products.Where(p => p.Status != null && p.Status.ToLower().Contains(status.ToLower())).ToListAsync();
+            var getProductList = new List<GetProduct?>();
+            foreach (var product in productList)
+            {
+                var newValue = ConvertProductToGetProduct(product);
+                if (newValue.SellerId == value.Id)
+                {
+                    getProductList.Add(newValue);
+                }
+            }
+            return getProductList;
+        }
         public async Task<List<GetProduct?>> GetEnableProductListBySellerEmailAsync(Account value)
         {
             var list = await GetEnableProductListAsync();

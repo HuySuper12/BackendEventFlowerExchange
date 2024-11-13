@@ -17,6 +17,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
 
         public MessageRepository(IAccountRepository accountRepository)
         {
+
             _accountRepository = accountRepository;
         }
 
@@ -61,6 +62,49 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         {
             _context = new();
             return await _context.Messages.Where(x => x.ReceiverId == receiver.Id && x.SenderId == sender.Id).ToListAsync();
+        }
+
+        public async Task<List<string>> GetMessagesBySenderIdAsync(Account sender)
+        {
+            _context = new();
+
+            var list = await _context.Messages.Where(m => m.SenderId == sender.Id).ToListAsync();
+
+            List<string> a = new List<string>();
+
+            foreach (var message in list)
+            {
+                a.Add(message.ReceiverId);
+            }
+
+            var messages = a.Distinct().ToList();
+
+            return messages;
+        }
+
+        public async Task<List<string>> GetMessagesByReceiveIdAsync(Account receiver)
+        {
+            _context = new();
+
+            var list = await _context.Messages.Where(m => m.ReceiverId == receiver.Id).ToListAsync();
+            var a2 = this.GetMessagesBySenderIdAsync(receiver);
+
+            List<string> a = new List<string>();
+
+
+            foreach (var message in list)
+            {
+                a.Add(message.SenderId);
+            }
+
+            foreach (var message in a2.Result)
+            {
+                a.Add(message);
+            }
+
+            var messages = a.Distinct().ToList();
+
+            return messages;
         }
     }
 }

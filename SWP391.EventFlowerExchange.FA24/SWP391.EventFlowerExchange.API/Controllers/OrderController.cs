@@ -281,7 +281,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             {
                 if (order.Status == "Pending")
                 {
-                    order.Status = "Fail";
+                    order.Status = "Cancel";
                     order.IssueReport = reason;
                     await _service.UpdateOrderStatusFromAPIAsync(order);
 

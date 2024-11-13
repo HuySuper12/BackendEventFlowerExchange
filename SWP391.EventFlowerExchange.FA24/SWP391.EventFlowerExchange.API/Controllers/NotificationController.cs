@@ -121,7 +121,7 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             return Ok("Not found!");
         }
 
-        [HttpGet("ViewShopNotificationById/{id}")]
+        [HttpGet("ViewShopNotificationById")]
         //[Authorize(Roles = ApplicationRoles.Staff + " , " + ApplicationRoles.Manager)]
         public async Task<IActionResult> ViewShopNotificationById(int id)
         {

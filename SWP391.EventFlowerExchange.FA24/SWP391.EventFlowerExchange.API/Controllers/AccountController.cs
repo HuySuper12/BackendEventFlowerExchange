@@ -97,6 +97,11 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             {
                 return Unauthorized();
             }
+            var account = await _service.GetUserByEmailFromAPIAsync(new Account() { Email = model.Email });
+            if (account.Status == false)
+            {
+                return BadRequest("Your account has been disable");
+            }
             return Ok(result);
         }
 
@@ -125,6 +130,11 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             if (string.IsNullOrEmpty(result))
             {
                 return Unauthorized();
+            }
+            var accountLogin = await _service.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            if (accountLogin.Status == false)
+            {
+                return BadRequest("Your account has been disable");
             }
             return Ok(result);
 

@@ -42,6 +42,7 @@ namespace SWP391.EventFlowerExchange.Application
 
         public Task<ProductStatistics> GetAllOrdersAndRatingBySellerFromAPIEmailAsync(Account account);
 
+        public Task<List<GetProduct?>> GetBannedProductListBySellerEmailFromAPIAsync(Account value);
 
     }
 }

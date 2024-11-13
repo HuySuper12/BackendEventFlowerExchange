@@ -104,5 +104,10 @@ namespace SWP391.EventFlowerExchange.Application
         {
             return _repo.GetExpiredProductListBySellerEmailAsync(value);
         }
+
+        public Task<List<GetProduct?>> GetBannedProductListBySellerEmailFromAPIAsync(Account value)
+        {
+            return _repo.GetBannedProductListBySellerEmailAsync(value);
+        }
     }
 }

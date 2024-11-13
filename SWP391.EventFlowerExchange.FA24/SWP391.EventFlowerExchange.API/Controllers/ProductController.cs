@@ -180,6 +180,15 @@ namespace SWP391.EventFlowerExchange.API.Controllers
             return Ok(checkProduct);
         }
 
+        [HttpGet("GetProductList/Banned/Seller")]
+        //[Authorize(Roles = ApplicationRoles.Seller)]
+        public async Task<IActionResult> GetBannedProductListBySellerEmail(string email)
+        {
+            var acc = await _account.GetUserByEmailFromAPIAsync(new Account() { Email = email });
+            var filter = await _service.GetBannedProductListBySellerEmailFromAPIAsync(acc);
+            return Ok(filter);
+        }
+
 
         [HttpGet("GetOrdersAndRatingBySellerEmail")]
         //[Authorize(Roles = ApplicationRoles.Seller)]

@@ -928,6 +928,89 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.MessageController",
+    "Method": "CreateMessage",
+    "RelativePath": "api/Message/CreateMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "SWP391.EventFlowerExchange.Domain.Entities.CreateMessage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.MessageController",
+    "Method": "GetMessagesByReceiverId",
+    "RelativePath": "api/Message/GetChatListByAccountEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "receiverEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.MessageController",
+    "Method": "GetMessagesByReceiverId",
+    "RelativePath": "api/Message/GetMessages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "receiverEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SWP391.EventFlowerExchange.Domain.ObjectValues.Message, SWP391.EventFlowerExchange.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.NotificationController",
     "Method": "CountNotificationsByEmail",
     "RelativePath": "api/Notification/CountNotificationsByEmail",
@@ -1066,7 +1149,7 @@
   {
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.NotificationController",
     "Method": "ViewShopNotificationById",
-    "RelativePath": "api/Notification/ViewShopNotificationById/{id}",
+    "RelativePath": "api/Notification/ViewShopNotificationById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1074,7 +1157,7 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1483,6 +1566,22 @@
   },
   {
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.ProductController",
+    "Method": "GetBannedProductListBySellerEmail",
+    "RelativePath": "api/Product/GetProductList/Banned/Seller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.ProductController",
     "Method": "GetDealProductListBySellerEmail",
     "RelativePath": "api/Product/GetProductList/Deal/Seller",
     "HttpMethod": "GET",
@@ -1696,6 +1795,68 @@
         "Name": "status",
         "Type": "System.String",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.RatingController",
+    "Method": "CheckRatingByOrderId",
+    "RelativePath": "api/Rating/CheckRatingByOrderId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.RatingController",
+    "Method": "CheckRatingByUserEmail",
+    "RelativePath": "api/Rating/CheckRatingByUserEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "orderId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -2140,7 +2301,7 @@
   {
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.TransactionController",
     "Method": "ViewAllTransactionByUserIdAndOrderIdAsync",
-    "RelativePath": "api/Transaction/ViewAllTransactionByUserIdAndOrderId",
+    "RelativePath": "api/Transaction/ViewAllTransactionByUserIdAndOrderId/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -2148,7 +2309,7 @@
       {
         "Name": "orderId",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

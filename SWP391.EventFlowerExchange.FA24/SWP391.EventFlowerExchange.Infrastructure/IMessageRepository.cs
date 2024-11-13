@@ -13,5 +13,10 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         public Task<bool> CreateMessageAsync(CreateMessage message);
 
         public Task<List<Message>> GetMessagesByReceiverIdAsync(Account sender, Account receiver);
+
+        public Task<List<string>> GetMessagesBySenderIdAsync(Account sender);
+
+        public Task<List<string>> GetMessagesByReceiveIdAsync(Account receiver);
+
     }
 }

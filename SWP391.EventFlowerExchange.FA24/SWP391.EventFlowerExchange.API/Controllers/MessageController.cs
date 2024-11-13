@@ -62,5 +62,24 @@ namespace SWP391.EventFlowerExchange.API.Controllers
 
             return BadRequest("Not found!");
         }
+
+
+
+        [HttpGet("GetChatListByAccountEmail")]
+        //[Authorize(Roles = ApplicationRoles.Buyer + ", " + ApplicationRoles.Seller)]
+        public async Task<ActionResult<List<string>>> GetMessagesByReceiverId(string receiverEmail)
+        {
+            var receiver = await _accountService.GetUserByEmailFromAPIAsync(new Account() { Email = receiverEmail });
+            if (receiver != null)
+            {
+                var result = await _service.GetMessagesByReceiveIFromApiAsync(receiver);
+                if (result != null)
+                {
+                    return Ok(result);
+                }
+            }
+
+            return BadRequest("Not found!");
+        }
     }
 }
