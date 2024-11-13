@@ -37,6 +37,7 @@ namespace SWP391.EventFlowerExchange.Infrastructure
         public Task<IdentityResult> DeleteAccountAsync(Account account);
         public Task<List<Account>> ViewAllAccountAsync();
         public Task<List<Account>> ViewAllAccountByRoleAsync(string role);
+        public Task<List<GetRegisterCustomerStatistic>> GetMonthlyRegisterCustomerStatisticsAsync();
         public Task<List<Account>> SearchAccountsByAddressAsync(string address);
         public Task<List<Account>> SearchAccountsBySalaryAsync(float minSalary, float maxSalary);
         public Task<List<Account>> SearchShipperByAddressAsync(string address);

@@ -468,5 +468,24 @@ namespace SWP391.EventFlowerExchange.Infrastructure
 
             return result;
         }
+
+        public async Task<List<GetRegisterCustomerStatistic>> GetMonthlyRegisterCustomerStatisticsAsync()
+        {
+            _context = new Swp391eventFlowerExchangePlatformContext();
+
+            var customers = await this.ViewAllAccountByRoleAsync(ApplicationRoles.Buyer);
+
+            var statistics = customers
+                .Where(a => a.CreatedAt.HasValue)
+                .GroupBy(a => new { a.CreatedAt.Value.Year, a.CreatedAt.Value.Month })
+                .Select(g => new GetRegisterCustomerStatistic
+                {
+                    CreateTime = new DateTime(g.Key.Year, g.Key.Month, 1).ToString("yyyy-MM"),
+                    TotalRegisterCustomer = g.Count()
+                })
+                .ToList();
+
+            return await Task.FromResult(statistics);
+        }
     }
 }

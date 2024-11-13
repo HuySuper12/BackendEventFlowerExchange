@@ -135,5 +135,10 @@ namespace SWP391.EventFlowerExchange.Application
         {
             return await _repo.SearchShipperByAddressAsync(address);
         }
+
+        public async Task<List<GetRegisterCustomerStatistic>> GetMonthlyRegisterCustomerStatisticsFromAPIAsync()
+        {
+            return await _repo.GetMonthlyRegisterCustomerStatisticsAsync();
+        }
     }
 }

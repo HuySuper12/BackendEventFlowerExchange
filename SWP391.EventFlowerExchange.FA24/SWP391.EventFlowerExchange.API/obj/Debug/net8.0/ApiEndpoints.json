@@ -131,6 +131,26 @@
   },
   {
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.AccountController",
+    "Method": "GetMonthlyRegisterCustomerStatistics",
+    "RelativePath": "api/Account/GetMonthlyRegisterCustomerStatistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SWP391.EventFlowerExchange.Domain.Entities.GetRegisterCustomerStatistic, SWP391.EventFlowerExchange.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.AccountController",
     "Method": "SignInFromAPIAsync",
     "RelativePath": "api/Account/Login",
     "HttpMethod": "POST",
@@ -2403,6 +2423,16 @@
     "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.VNPAYController",
     "Method": "PaymentCallback",
     "RelativePath": "api/VNPAY/payment-callback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SWP391.EventFlowerExchange.API.Controllers.VNPAYController",
+    "Method": "PaymentSalary",
+    "RelativePath": "api/VNPAY/PaymentSalaryForStaffAndShipper",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

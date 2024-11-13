@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SWP391.EventFlowerExchange.Application;
+using SWP391.EventFlowerExchange.Domain;
 using SWP391.EventFlowerExchange.Domain.Entities;
 using SWP391.EventFlowerExchange.Domain.ObjectValues;
 using SWP391.EventFlowerExchange.Infrastructure;
@@ -338,6 +340,13 @@ namespace SWP391.EventFlowerExchange.API.Controllers
                 }
             }
             return false;
+        }
+
+        [HttpGet("GetMonthlyRegisterCustomerStatistics")]
+        //[Authorize(Roles = ApplicationRoles.Manager)]
+        public async Task<ActionResult<List<GetRegisterCustomerStatistic>>> GetMonthlyRegisterCustomerStatistics()
+        {
+            return await _service.GetMonthlyRegisterCustomerStatisticsFromAPIAsync();
         }
     }
 }

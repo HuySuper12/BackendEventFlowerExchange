@@ -37,6 +37,6 @@ namespace SWP391.EventFlowerExchange.Application
         public Task<List<Account>> SearchAccountsByAddressFromAPIAsync(string address);
         public Task<List<Account>> SearchAccountsBySalaryFromAPIAsync(float minSalary, float maxSalary);
         public Task<List<Account>> SearchShipperByAddressFromAPIAsync(string address);
-
+        public Task<List<GetRegisterCustomerStatistic>> GetMonthlyRegisterCustomerStatisticsFromAPIAsync();
     }
 }
