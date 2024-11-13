@@ -8,8 +8,8 @@ namespace SWP391.EventFlowerExchange.Domain.Entities
 {
     public class GetRegisterCustomerStatistic
     {
-        public string CreateTime { get; set; }
+        public string name { get; set; }
 
-        public int TotalRegisterCustomer { get; set; }
+        public int customer { get; set; }
     }
 }

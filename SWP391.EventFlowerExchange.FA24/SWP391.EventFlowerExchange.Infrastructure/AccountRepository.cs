@@ -480,8 +480,8 @@ namespace SWP391.EventFlowerExchange.Infrastructure
                 .GroupBy(a => new { a.CreatedAt.Value.Year, a.CreatedAt.Value.Month })
                 .Select(g => new GetRegisterCustomerStatistic
                 {
-                    CreateTime = new DateTime(g.Key.Year, g.Key.Month, 1).ToString("yyyy-MM"),
-                    TotalRegisterCustomer = g.Count()
+                    name = new DateTime(g.Key.Year, g.Key.Month, 1).ToString("yyyy-MM"),
+                    customer = g.Count()
                 })
                 .ToList();
 
